@@ -1,0 +1,105 @@
+{
+    "name": "PlayerInputFile",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "41fea99b-5923-44b1-bf39-129dc22fc8ef",
+            "actions": [
+                {
+                    "name": "Look",
+                    "type": "Value",
+                    "id": "b6ba49a0-43d6-4137-a77a-cdda739a70de",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Open Door L",
+                    "type": "Button",
+                    "id": "4366f4de-4cce-4a60-a897-97b9374ed904",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Open Door R",
+                    "type": "Button",
+                    "id": "c5baef28-5892-44bd-9054-63bae6136270",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Open Camera",
+                    "type": "Button",
+                    "id": "d301cadb-8581-45c0-87b3-a80b92251c21",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "88d99670-cddb-4498-9d1e-db972e3ba80a",
+                    "path": "<XInputController>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d39dbc33-ea22-4f56-bc71-d7d8a749e39f",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6c6fc1b9-4d38-4b95-a011-3fcc42a092df",
+                    "path": "<XInputController>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Open Door L",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9cc7bbfc-2e89-4fad-bc4a-404fb1ec004a",
+                    "path": "<XInputController>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Open Door R",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "44ade453-03d5-4922-a9b9-fe6955446fc3",
+                    "path": "<XInputController>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Open Camera",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
