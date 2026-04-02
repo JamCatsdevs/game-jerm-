@@ -18,6 +18,8 @@ public class AnimatronicAI : MonoBehaviour
     public CameraToggle door;
     bool isAttacking = false;
 
+    public PlayerHide playerHide;
+
     void Start()
     {
         currentRoom = rooms[Random.Range(0, rooms.Length)];
@@ -57,6 +59,11 @@ public class AnimatronicAI : MonoBehaviour
         {
             Debug.Log(name + "Jumpscare");
         }
+        else if (playerHide != null && playerHide.isHiding)
+        {
+            Debug.Log(name + "Can't find player(Hiding)");
+            MoveBack();
+        }
         else
         {
             MoveBack();
@@ -71,7 +78,8 @@ public class AnimatronicAI : MonoBehaviour
             MoveBack();
             Debug.Log(name + "blocked");
         }
-        isAttacking = false;
+
+            isAttacking = false;
     }
     void MoveBack()
     {
