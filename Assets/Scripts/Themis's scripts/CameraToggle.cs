@@ -6,9 +6,11 @@ public class CameraToggle : MonoBehaviour
     public GameObject cameraUI;
     public GameObject officeUI;
 
-    private bool isOpen = false;
+    public bool isOpen = false;
     public bool rightDoorClosed = false;
     public bool leftDoorClosed = false;
+
+    PlayerHide playerHide;
 
     [Header("Visuals")]
     public GameObject leftDooooooor;
@@ -19,6 +21,7 @@ public class CameraToggle : MonoBehaviour
     private InputAction CloseTheLeftDoor;
     private InputAction CloseTheRightDoor;
     private InputAction toggleCameraAction;
+    private InputAction hideUnderZaTable;
 
     private void OnEnable()
     {
@@ -27,16 +30,19 @@ public class CameraToggle : MonoBehaviour
         CloseTheLeftDoor = NPCActionMap.FindAction("Open Door L");
         CloseTheRightDoor = NPCActionMap.FindAction("Open Door R");
         toggleCameraAction = NPCActionMap.FindAction("Open Camera");
+        hideUnderZaTable = NPCActionMap.FindAction("Hide Hide Hide");
 
         NPCActionMap.Enable();
 
         CloseTheLeftDoor.Enable();
         CloseTheRightDoor.Enable();
         toggleCameraAction.Enable();
+        hideUnderZaTable.Enable();
 
         CloseTheLeftDoor.performed += OnLeftDoorInteract;
         CloseTheRightDoor.performed += OnRightDoorInteract;
         toggleCameraAction.performed += OnToggleCamera;
+        hideUnderZaTable.performed += OnToggleHide;
 
     }
 
@@ -45,16 +51,27 @@ public class CameraToggle : MonoBehaviour
         CloseTheLeftDoor.Disable();
         CloseTheRightDoor.Disable();
         toggleCameraAction.Disable();
+        hideUnderZaTable.Disable();
 
         CloseTheRightDoor.canceled -= OnLeftDoorInteract;
         CloseTheLeftDoor.canceled -= OnRightDoorInteract;
         toggleCameraAction.performed -= OnToggleCamera;
+        hideUnderZaTable.performed -= OnToggleHide;
     }
 
     private void Update()
     {
        
         
+    }
+
+    void OnToggleHide(InputAction.CallbackContext context)
+    {
+        if (context.ReadValueAsButton())
+        {
+            playerHide.ToggleHide();
+            Debug.Log("Player has hidden");
+        }
     }
 
     void OnToggleCamera(InputAction.CallbackContext context)
