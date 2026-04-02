@@ -40,6 +40,33 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Peek? NO HIDE",
+                    "type": "Button",
+                    "id": "9bf8fd59-69f3-4eab-80e1-11a697cbbb14",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Next one!",
+                    "type": "Button",
+                    "id": "f07d628c-fd69-418f-96c1-f887b66c69be",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "GOBACK",
+                    "type": "Button",
+                    "id": "be446505-a776-4120-89fd-b1b0c9d78e06",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -95,6 +122,39 @@
                     "processors": "",
                     "groups": "",
                     "action": "Open Camera",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "be53d7a3-2201-4f58-b6c1-d4c9a0ad53cc",
+                    "path": "<XInputController>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Peek? NO HIDE",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d4c55d43-66f1-4322-b943-e7ea50ae6718",
+                    "path": "<XInputController>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Next one!",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1c5c6608-110b-42ec-9e70-9a50b8d9b24b",
+                    "path": "<XInputController>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GOBACK",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
